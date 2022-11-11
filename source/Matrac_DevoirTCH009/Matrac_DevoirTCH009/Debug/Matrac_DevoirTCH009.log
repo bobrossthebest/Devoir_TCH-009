@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\julie\Documents\Visual Studio 2019\Git\bobrossthebest\Devoir_TCH-009\source\Matrac_DevoirTCH009\Matrac_DevoirTCH009\main.c(70,9): warning C4101: 'altitude_min' : variable locale non référencée
+C:\Users\julie\Documents\Visual Studio 2019\Git\bobrossthebest\Devoir_TCH-009\source\Matrac_DevoirTCH009\Matrac_DevoirTCH009\main.c(70,23): warning C4101: 'altitude_max' : variable locale non référencée
+  matrac_lib.c
+  menu.c
+  Génération de code en cours...
+  Matrac_DevoirTCH009.vcxproj -> C:\Users\julie\Documents\Visual Studio 2019\Git\bobrossthebest\Devoir_TCH-009\source\Matrac_DevoirTCH009\Debug\Matrac_DevoirTCH009.exe

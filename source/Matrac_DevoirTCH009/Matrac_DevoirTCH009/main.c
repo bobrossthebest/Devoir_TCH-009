@@ -72,7 +72,41 @@ int main()
 
 	// Insérer ici la boucle du menu principal se terminant lorsque l'utilisateur
 	// choisit l'option Quitter :
+	do {
+		choix = afficher_menu();
+		switch (choix) {
+		case CHARGER:
+			printf("Entrez le nom du fichier a charger: ");
+			fflush(stdin);
+			scanf("%s", nom_fichier);
+			printf("\n\nChargement du fichier...");
+			nb_point =
+				lire_fichier_gpx(nom_fichier, tab_latt, tab_long, tab_alti, MAXPOINT);
+			if (nb_point == -1) {
+				printf("\nErreur de chargement de fichier");
+			}
+			else {
+				printf("\n...%d points lus", nb_point);
+			}
+			break;
 
+		case AFFICHER:
+			printf("Donnees en memoire: \n\n");
+			printf("index \t\tlattitude\tlongitude\tlaltitude");
+			int i;
+			for (i = 0; i < nb_point; i++) {
+				printf("\t%d\t%lf\t%lf\t%lf", i, tab_latt[i], tab_long[i], tab_alti[i]);
+			}
+			break;
+
+		case ANALYSER:
+			break;
+
+		case PENTEMAX:
+			break;
+		}
+
+	} while (choix != QUITTER);
 
 	// fin du programme
 	return EXIT_SUCCESS;
