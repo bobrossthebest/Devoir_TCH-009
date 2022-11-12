@@ -199,7 +199,7 @@ double pentemax(double tab_lat[], double tab_long[], double tab_alti[],
 
 /* --------------------------------------------------------------
         fonction: valeurmin_tab
-        auteur:
+        auteur: Julien Groulx
         description: rechercher la valeur minimale d'un tableau de
    r�elsvaleurmin_tab param�tres: taille: nombre de points valides pr�sent dans
    le tableau tab:    tableau des valeurs dans lequel la recherche du minimum
@@ -213,7 +213,7 @@ int valeurmin_tab(double tab[], int taille, double *valmin);
 
 /* --------------------------------------------------------------
         fonction: valeurmax_tab
-        auteur:
+        auteur: Julien Groulx
         description: rechercher la valeur maximale d'un tableau de r�els
                 param�tres:
                 taille: nombre de points valides pr�sent dans le tableau
