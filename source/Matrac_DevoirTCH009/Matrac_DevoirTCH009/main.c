@@ -68,7 +68,7 @@ int main() {
   int choix;                               // choix du menu principal
   char nom_fichier[MAXCARNOMFICHIER] = ""; // nom du fichier � traiter
   int nb_point = 0;                // nombre de points de la trace en m�moire
-  double tab_latt[MAXPOINT] = {0}; // tableau des valeurs de lattitude
+  double tab_lat[MAXPOINT] = {0};  // tableau des valeurs de lattitude
   double tab_long[MAXPOINT] = {0}; // tableau des valeurs de longitudes
   double tab_alti[MAXPOINT] = {0}; // tableau des valeurs d'altidude
   int taillefenetre = 100; // nombre de segments a consid�rer autour d'un point
@@ -82,6 +82,7 @@ int main() {
 
   do {
     choix = afficher_menu();
+
     switch (choix) {
     case CHARGER:
       printf("Entrez le nom du fichier a charger: ");
@@ -89,7 +90,7 @@ int main() {
       scanf("%s", nom_fichier);
       printf("\n\nChargement du fichier...");
       nb_point =
-          lire_fichier_gpx(nom_fichier, tab_latt, tab_long, tab_alti, MAXPOINT);
+          lire_fichier_gpx(nom_fichier, tab_lat, tab_long, tab_alti, MAXPOINT);
       if (nb_point == -1) {
         printf("\nErreur de chargement de fichier");
       } else {
@@ -99,11 +100,7 @@ int main() {
 
     case AFFICHER:
       printf("Donnees en memoire: \n\n");
-      printf("index \t\tlattitude\tlongitude\tlaltitude");
-      int i;
-      for (i = 0; i < nb_point; i++) {
-        printf("\t%d\t%lf\t%lf\t%lf", i, tab_latt[i], tab_long[i], tab_alti[i]);
-      }
+      afficher_trace(tab_lat, tab_long, tab_alti, nb_point);
       break;
 
     case ANALYSER:
