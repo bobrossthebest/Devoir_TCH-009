@@ -1,5 +1,5 @@
 /*
-Auteur(s): Julien Groulx, Zachary Fillion, Karl Aidans, Justin Landry
+Auteur(s): Julien Groulx
 Date: 11 novembre 2022
 
 Ce module contient les impl�mentations des fonctions
